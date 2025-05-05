@@ -1,4 +1,3 @@
-
 import streamlit as st
 import random
 
@@ -22,23 +21,20 @@ hobbies = st.multiselect("🏓 Interessen", ["Lesen", "Kochen", "Sport", "Techni
 
 # AI greeting card generation
 if st.button("📝 Generiere Grußkarte mit KI"):
-    greeting = f"Liebe/r {recipient},
+    greeting = f"""Liebe/r {recipient},
 
-"
-    greeting += f"Zum {occasion} wünsche ich dir alles Gute! "
-    greeting += random.choice([
+Zum {occasion} wünsche ich dir alles Gute! {random.choice([
         "Du bist ein besonderer Mensch.",
         "Ich hoffe, dein Tag ist voller Freude.",
         "Möge dein neues Lebensjahr voller Glück sein.",
         "Danke, dass es dich gibt."
-    ])
-    greeting += "
+    ])}
 
 Herzliche Grüße,
-[Dein Name]"
+[Dein Name]"""
     st.text_area("🎊 Deine Grußkarte", greeting, height=200)
 
-# AI-generated gift recommendations (mock)
+# AI-generated gift recommendations
 if st.button("🎁 Geschenkideen anzeigen"):
     st.subheader("🔮 KI-Geschenkideen")
     st.write("Basierend auf deinen Angaben schlägt unsere KI folgendes vor:")

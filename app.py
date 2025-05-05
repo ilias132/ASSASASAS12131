@@ -83,7 +83,9 @@ if st.button(translate("Get Gift Ideas", lang)):
         url = f"https://www.amazon.{('de' if country=='Germany' else 'com')}/s?k={query}&tag={AFFILIATE_TAG}"
         cols = st.columns([1,4,1])
         with cols[0]: st.image(get_qr_code(url))
-        with cols[1]: st.markdown(f"**{idea}**  
+        with cols[1]: 
+    st.markdown(f"**{idea}**")  
+
 Price: approx. {budget} {currency}  
 [Buy on Amazon]({url})")
         with cols[2]: st.button("♥", key=idea)  # Wishlist placeholder

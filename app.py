@@ -87,7 +87,8 @@ if st.button(translate("Get Gift Ideas", lang)):
     st.markdown(f"**{idea}**")  
 
 Price: approx. {budget} {currency}  
-[Buy on Amazon]({url})")
+st.markdown(f"[Buy on Amazon]({url})")  
+
         with cols[2]: st.button("♥", key=idea)  # Wishlist placeholder
 
 if st.button(translate("Generate Greeting Card", lang)):
